@@ -41,9 +41,10 @@
     <button onclick="restart()">Start again</button>
 </c:if>
 <script>
+    // для перезагрузки страницы после окончания игры
     function restart() {
         $.ajax({
-            url: '/start',
+            url: '/restart',
             type: 'POST',
             contentType: 'application/json;charset=UTF-8',
             async: false,
