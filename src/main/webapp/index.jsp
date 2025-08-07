@@ -28,30 +28,30 @@
         <td onclick="window.location='/logic?click=8'">${data.get(8).getSign()}</td>
     </tr>
 </table>
-<hr>
-<c:set var="CROSSES" value="<%=Sign.CROSS%>"/>
-<c:set var="NOUGHTS" value="<%=Sign.NOUGHT%>"/>
+<%--<hr>--%>
+<%--<c:set var="CROSSES" value="<%=Sign.CROSS%>"/>--%>
+<%--<c:set var="NOUGHTS" value="<%=Sign.NOUGHT%>"/>--%>
 
-<c:if test="${winner == CROSSES}">
-    <h1>CROSSES WIN!</h1>
-    <button onclick="restart()">Start again</button>
-</c:if>
-<c:if test="${winner == NOUGHTS}">
-    <h1>NOUGHTS WIN!</h1>
-    <button onclick="restart()">Start again</button>
-</c:if>
+<%--<c:if test="${winner == CROSSES}">--%>
+<%--    <h1>CROSSES WIN!</h1>--%>
+<%--    <button onclick="restart()">Start again</button>--%>
+<%--</c:if>--%>
+<%--<c:if test="${winner == NOUGHTS}">--%>
+<%--    <h1>NOUGHTS WIN!</h1>--%>
+<%--    <button onclick="restart()">Start again</button>--%>
+<%--</c:if>--%>
 <script>
-    function restart() {
-        $.ajax({
-            url: '/start',
-            type: 'POST',
-            contentType: 'application/json;charset=UTF-8',
-            async: false,
-            success: function () {
-                location.reload();
-            }
-        });
-    }
+    // function restart() {
+    //     $.ajax({
+    //         url: '/start',
+    //         type: 'POST',
+    //         contentType: 'application/json;charset=UTF-8',
+    //         async: false,
+    //         success: function () {
+    //             location.reload();
+    //         }
+    //     });
+    // }
 </script>
 
 </body>
